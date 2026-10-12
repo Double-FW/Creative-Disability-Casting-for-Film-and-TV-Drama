@@ -1,0 +1,132 @@
+# AGENTS
+
+Purpose
+-------
+This document defines operating principles and practical rules for automated agents and AI-assisted workflows used with this repository. The focus is on: evaluation of candidate and evidence material; searching for talent and production information online; ensuring proportional and meaningful representation of disabled people; and removing, detecting and mitigating bias from discovery, shortlisting and decision processes.
+
+Principles (non-negotiable)
+---------------------------
+- Human accountability: an identifiable human (producer, casting director or named decision owner) must own every casting or portrayal decision an agent supports. An agent provides recommendations, not approvals.
+- Do no harm: never take actions that could expose, out, or endanger a person (performer, consultant or source). Treat disability, health and access information as sensitive.
+- Evidence hygiene: label all claims with evidence type (documented fact, reasoned interpretation, practitioner approach, discovery lead, verification pending). Never promote unverified retrospective diagnoses as fact.
+- Authenticity and proportionality: prioritise relevant lived experience when disability, language or culture materially affects character embodiment, communication or meaning. For incidental roles, prioritise open casting and widened candidate pools.
+- Minimal inference: do not infer a person's diagnosis, impairment, neurotype, or access needs from images, video, social media, performance, assistive technology or biography.
+- Auditability and traceability: record agent inputs, search queries, results, verification steps, and the human decisions that follow.
+
+Scope and where agents may be used
+----------------------------------
+- Talent discovery (research and longlists)
+- Script analysis for casting-relevant characteristics
+- Evidence collation and production decision record preparation
+- Monitoring public discourse, policy and production trends
+
+Authorised external resources
+-----------------------------
+Agents may query and retrieve information from the following source types when relevant and within legal and policy constraints:
+- Performer directories (e.g., ProFile)
+- Public professional profiles (actor websites, Spotlight, IMDb) and public press coverage
+- Institutional guidance (Broadcaster commitments, union resources such as Equity and SAG-AFTRA)
+- Repositories maintained by Double-FW: 
+  - https://github.com/Double-FW/Authentic-Representation-Project — use for productions, talent, policies, trends and creative-risk context
+  - https://github.com/Double-FW/Drama-and-Disability — Disability & Drama repository and future articles (Disability and Drama Repository)
+- Academic, historical and published sources for background research
+
+Search and talent-discovery rules
+---------------------------------
+- Use inclusive, broad queries first. Example intent: "actors who use wheelchairs with screen credits" rather than binary yes/no filters.
+- Prefer verified, professional sources for availability and credit information (agent pages, agency contact, Spotlight). Treat social posts as discovery leads requiring verification.
+- Preserve contact, consent and privacy expectations: do not scrape private contact details or direct-message people without an established outreach protocol and human approval.
+- Record query terms, date/time, and top-N sources returned for every automated search.
+- Provide an accessible, human-reviewable longlist with evidence links, skills/credits summary, and an `access_summary` field describing publicly-known, performer-provided adjustments (never include medical or other special-category personal data recorded without lawful basis).
+
+Evaluation, scoring and proportional representation
+-------------------------------------------------
+- Evaluation outputs must separate evidence from recommendation. For each candidate provide:
+  - `evidence_links` (URLs and evidence label)
+  - `skills_and_credits` (documented credits, training, specialist skills)
+  - `relevance_rationale` (why the candidate may fit essential/adaptable characteristics)
+  - `verification_status` (verified/unverified/verification_pending)
+  - `access_summary` (performer-provided, consented adjustments only)
+- Proportional representation metrics (agent compute only; used to highlight gaps, not to select individuals): track baseline diversity markers at a population or production-level (e.g., proportion of roles with incidental disability representation, types of disabilities represented) using aggregated, non-identifying statistics.
+- Never use a single person as a proxy for an entire community. Report counts and ranges rather than treating single occurrences as representative.
+
+Bias detection and mitigation
+-----------------------------
+- Input sanitisation: remove or annotate search filters that embed ableist assumptions ("severe", "mild", "functional limitation cost") and require human confirmation before using such language.
+- Blind-review modes: produce candidate lists where personally-identifying details are hidden for early-stage creative evaluation (showreel/skills first), exposing identity only when essential for authenticity or access.
+- Counterfactual sampling: when a candidate pool is narrow, the agent should automatically generate alternative searches (different keywords, broadened geographic or training sources) and report outreach opportunities tried.
+- Explainability: provide short rationales for every ranking or score. Include which features and sources contributed to a score.
+- Audits: keep an immutable audit log of search inputs, candidate outputs, ranking criteria and human overrides for periodic review.
+
+Data protection, privacy and sensitive data
+-------------------------------------------
+- Treat disability status, medical details and access needs as sensitive personal data. Store these only in restricted operational records when lawfully permitted and with explicit performer consent.
+- Do not persist or display special-category personal data in public or widely-shared artifacts (issues, public PRs, README files, open task logs).
+- Use `access_summary` fields with consented and minimal language (for example: "requires accessible travel and 1:1 sign-language support at rehearsal") rather than medical labels.
+- Adhere to applicable jurisdictional law (e.g., UK Equality Act, ICO guidance) and the production's privacy policies.
+
+Human-in-the-loop and review triggers
+-------------------------------------
+Agents must escalate to named humans for review when any of the following occur:
+- A non-disabled performer is recommended for an explicitly disabled role.
+- The workflow proposes condition transposition or simulation of disability through prosthetics, movement imitation or VFX.
+- Historical diagnosis is central to casting and evidence is disputed or retrospective.
+- An adjustment is claimed to be impracticable or materially costly.
+- Publicity or marketing would disclose a performer's disability without explicit consent.
+
+Decision records and traceability
+---------------------------------
+For every casting-related recommendation include a decision record (template fields):
+- `production` and `role`
+- `decision_owner` (named human)
+- `agent_query` (exact search terms and date/time)
+- `longlist` (IDs + evidence links)
+- `shortlist` (IDs + rationale)
+- `essential_characteristics` and `adaptable_characteristics`
+- `consultation` (who was consulted and remit)
+- `access_implications` and `access_owner`
+- `verification_status` and `verification_steps`
+- `final_decision` and `rationale`
+- `dissenting_advice` or `unresolved_uncertainty`
+- `review_date_or_trigger`
+
+Verification and responsible sourcing
+-----------------------------------
+- Do not treat directory inclusion or IMDb lists as proof of availability, representativeness or consent. Verify claims with agent/agency contact, or an authorised public channel.
+- Verify historical claims against scholarly sources before adopting a portrayal decision that depends on them.
+- When scraping public data, follow the target site's robots and terms of service; prefer API access and rate-limiting.
+
+Maintenance, updates and provenance
+----------------------------------
+- Tag each agent-run output with `agent_version`, `data_sources_snapshot` (list of URLs + retrieval dates), and `commit_or_run_id` so results can be traced.
+- When updating this file, list change notes with date, author and rationale.
+
+Operational examples (short)
+---------------------------
+1) Talent longlist workflow
+   - Input: approved breakdown, essential/adaptable characteristics
+   - Agent: run inclusive searches against performer directories and public credits, build longlist with evidence links and `access_summary` (consented)
+   - Human: casting lead reviews longlist in blind-review mode, then requests identity-unmasked details for finalists
+
+2) Script-character verification
+   - Input: script excerpt and character brief
+   - Agent: extract functional and embodied characteristics and cross-reference historical/technical sources
+   - Human: creative disability consultant reviews, signs off on essential vs adaptable list
+
+References and related repositories
+-----------------------------------
+- Creative Disability Casting reference & guidelines in this repository (canonical): Creative Disability Casting Guidelines and Creative_Disability_Casting_Reference.md
+- Related Double-FW projects:
+  - https://github.com/Double-FW/Authentic-Representation-Project — productions, talent, policies, trends and creative-risk information
+  - https://github.com/Double-FW/Drama-and-Disability — Disability & Drama Repository and future articles an agent will find useful
+- Legal and guidance starting points: Equality Act guidance, ICO special-category data guidance, BBC Five As and Channel 4 Code of Portrayal (see Reference section in Creative_Disability_Casting_Reference.md)
+
+Contact & escalation
+--------------------
+For questions about this agent policy or to request an exception, contact the repository owner or the named producer for the production. All exceptions must be recorded with rationale and an appointed decision owner.
+
+---
+
+Change log
+----------
+- 2026-10-12: Version 1.0 created by repository contributor guidance. 
