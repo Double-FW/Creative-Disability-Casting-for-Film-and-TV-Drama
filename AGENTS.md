@@ -1,3 +1,247 @@
+---
+title: "AGENTS"
+version: "1.1"
+author: "Double FW"
+date: "2026-10-12"
+license: "CC BY 4.0"
+language: "en-GB"
+repository: "Double-FW/Creative-Disability-Casting-for-Film-and-TV-Drama"
+artifact_type: "agent_policy_document"
+use_case:
+  - "talent_discovery"
+  - "casting_evaluation"
+  - "script_analysis"
+  - "production_decision_recording"
+entities:
+  - name: "candidate"
+    description: "A performer or talent entry including public credits and consenting access_summary"
+  - name: "search_query"
+    description: "Search parameters used to discover talent"
+  - name: "decision_record"
+    description: "Structured record of recommendations and final human decisions"
+  - name: "access_summary"
+    description: "Performer-provided, consented access adjustments (non-medical)"
+  - name: "agent_run"
+    description: "Metadata for each automated run: agent_version, data_sources_snapshot, commit_or_run_id"
+review:
+  last_reviewed: "2026-10-12"
+  review_cycle_months: 6
+  reviewer: "repository owner"
+change_log_url: "./AGENTS.md#change-log"
+related_repos:
+  - "https://github.com/Double-FW/Authentic-Representation-Project"
+  - "https://github.com/Double-FW/Drama-and-Disability"
+---
+
+## MACHINE-READABLE: rules, schemas, templates and flow
+
+This section contains machine-readable artifacts an agent can ingest before using the human-readable guidance below.
+
+Machine rules (JSON)
+```json
+{
+  "rules_version": "1.0",
+  "rules": [
+    {
+      "id": "R001",
+      "name": "human_ownership_required",
+      "trigger": "any_decision_recommendation",
+      "action": "require_field",
+      "field": "decision_owner",
+      "escalate_to": "producer_or_casting_director",
+      "severity": "blocker"
+    },
+    {
+      "id": "R002",
+      "name": "no_inference_of_medical_status",
+      "trigger": "candidate_profile_build",
+      "action": "forbid",
+      "forbidden_inference": ["diagnosis","impairment_from_image","neurotype_from_bio"],
+      "severity": "high"
+    },
+    {
+      "id": "R003",
+      "name": "preserve_audit",
+      "trigger": "agent_run_complete",
+      "action": "emit_audit_record",
+      "audit_record_fields": ["agent_version","agent_query","data_sources_snapshot","top_results","timestamp","run_id"],
+      "severity": "must"
+    },
+    {
+      "id": "R004",
+      "name": "escalate_on_non_disabled_for_disabled_role",
+      "trigger": "recommendation_for_explicitly_disabled_role_with_non_disabled_candidate",
+      "action": "escalate",
+      "escalate_to": "named_human_decision_owner",
+      "severity": "blocker"
+    }
+  ]
+}
+```
+
+Decision record schema (JSON Schema)
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DecisionRecord",
+  "type": "object",
+  "required": ["production","role","decision_owner","agent_query","longlist","final_decision","timestamp"],
+  "properties": {
+    "production": {"type": "string"},
+    "role": {"type": "string"},
+    "decision_owner": {"type": "string"},
+    "agent_query": {"type": "object"},
+    "longlist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["candidate_id","evidence_links","verification_status"],
+        "properties": {
+          "candidate_id": {"type": "string"},
+          "evidence_links": {"type": "array","items":{"type":"string","format":"uri"}},
+          "skills_and_credits": {"type":"array","items":{"type":"string"}},
+          "access_summary": {"type":"string"},
+          "verification_status": {"type":"string","enum":["verified","unverified","verification_pending"]}
+        }
+      }
+    },
+    "shortlist": {"type":"array","items":{"type":"string"}},
+    "essential_characteristics": {"type":"array","items":{"type":"string"}},
+    "adaptable_characteristics": {"type":"array","items":{"type":"string"}},
+    "consultation": {"type":"array","items":{"type":"object"}},
+    "access_implications": {"type":"object"},
+    "verification_steps": {"type":"array","items":{"type":"string"}},
+    "final_decision": {"type":"string"},
+    "final_rationale": {"type":"string"},
+    "dissenting_advice": {"type":"string"},
+    "review_date_or_trigger": {"type":"string","format":"date-time"},
+    "timestamp": {"type":"string","format":"date-time"},
+    "agent_run_id": {"type":"string"}
+  }
+}
+```
+
+Observability / Audit spec (YAML)
+```yaml
+observability:
+  audit_record:
+    required_fields:
+      - agent_run_id
+      - agent_version
+      - agent_query
+      - timestamp
+      - data_sources_snapshot
+      - top_results
+      - human_overrides
+    retention_days: 3650
+    storage_class: "restricted"
+  redact_rules:
+    - name: "email"
+      pattern: "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+      replacement: "[REDACTED_EMAIL]"
+    - name: "phone"
+      pattern: "\\+?\\d[\\d \\-()]{7,}\\d"
+      replacement: "[REDACTED_PHONE]"
+    - name: "national_id"
+      pattern: "\\b\\d{8,}\\b"
+      replacement: "[REDACTED_SENSITIVE]"
+    - name: "medical_terms"
+      pattern: "(?i)\\b(diagnosis|diagnosed|has\\s+\\w+)\\b"
+      replacement: "[REDACTED_MEDICAL]"
+  retention_policy_notes: "Audit records stored in restricted location. Decision records that include sensitive personal data must be pseudonymised or stored in operational records with lawful basis and consent."
+```
+
+Minimal decision flowgraph (JSON)
+```json
+{
+  "flow_version": "1.0",
+  "nodes": [
+    {"id":"start","type":"start"},
+    {"id":"search","type":"action","label":"Run inclusive search"},
+    {"id":"longlist","type":"action","label":"Build longlist (blind mode available)"},
+    {"id":"blind_review","type":"action","label":"Creative blind review"},
+    {"id":"unmask_if_needed","type":"decision","label":"Require identity for authenticity/access?"},
+    {"id":"verify","type":"action","label":"Verify availability/credits/access_summary"},
+    {"id":"escalate","type":"action","label":"Escalate to human (per triggers)"},
+    {"id":"decision","type":"action","label":"Human final decision"},
+    {"id":"archive","type":"end","label":"Archive decision record & audit"}
+  ],
+  "edges": [
+    ["start","search"],
+    ["search","longlist"],
+    ["longlist","blind_review"],
+    ["blind_review","unmask_if_needed"],
+    ["unmask_if_needed","verify"],
+    ["unmask_if_needed","escalate"],
+    ["verify","decision"],
+    ["escalate","decision"],
+    ["decision","archive"]
+  ]
+}
+```
+
+Templates (short prompts and expected responses)
+
+- Prompt: talent-search (short)
+  - "Search for candidates for role: {role}. Essential characteristics: {essential_characteristics}. Adaptable: {adaptable_characteristics}. Max results: {n}. Return JSON longlist with fields candidate_id, display_name(if consented), evidence_links, skills_and_credits, access_summary (consented only), verification_status."
+
+- Expected agent response (JSON)
+```json
+{
+  "agent_run_id": "uuid-v4",
+  "timestamp": "2026-10-12T12:00:00Z",
+  "query": { "role":"{role}","essential":["..."],"adaptable":["..."], "max_results": 50 },
+  "longlist": [
+    {
+      "candidate_id": "profile-12345",
+      "display_name": null,
+      "evidence_links": ["https://..."],
+      "skills_and_credits": ["credit1","credit2"],
+      "access_summary": "requires accessible travel; consented",
+      "verification_status": "verification_pending"
+    }
+  ]
+}
+```
+
+- Prompt: verify-candidate
+  - "Verify candidate {candidate_id} availability and representation. Check agency page or public contact, return verification_status and confirmation timestamp."
+
+- Prompt: prepare-decision-record
+  - "Produce DecisionRecord JSON conforming to DecisionRecord schema for production {production} role {role}. Include agent_run_id and timestamp."
+
+Quick-start checklist (compact)
+```yaml
+quick_start:
+  - "Load canonical Guidelines and AGENTS front matter (check review metadata)."
+  - "Prepare role brief (essential/adaptable characteristics)."
+  - "Run inclusive search query (record agent_query & agent_run_id)."
+  - "Produce blind longlist; human does creative blind review."
+  - "Unmask finalists only when needed for authenticity/access."
+  - "Verify with authorised contact; record verification_steps."
+  - "Create DecisionRecord and assign decision_owner."
+  - "Archive DecisionRecord and audit_record with retention metadata."
+```
+
+Observability & escalation logging requirements (short)
+
+- Emit an audit record at the end of every run containing the required_fields from the audit_spec above.
+- Store audit records in access-limited storage, tagged with retention_days.
+- Apply redact_rules before any record is stored in non-restricted locations (e.g., public PRs).
+- For any escalation, generate an escalation_event with: run_id, trigger_reason (rule id), implicated_candidate_id, suggested_actions, and assigned_decision_owner.
+- All human overrides must be stored in the audit record with user_id and timestamp.
+
+Machine-checkable changelog (YAML)
+```yaml
+changelog:
+  - date: "2026-10-12"
+    version: "1.1"
+    author: "Double FW"
+    notes: "Add machine-readable metadata, schemas, templates, observability hooks and flowgraph."
+```
+
+---
+
 # AGENTS
 
 Purpose
@@ -129,4 +373,5 @@ For questions about this agent policy or to request an exception, contact the re
 
 Change log
 ----------
-- 2026-10-12: Version 1.0 created by repository contributor guidance. 
+- 2026-10-12: Version 1.0 created by repository contributor guidance.
+- 2026-10-12: Version 1.1 added machine-readable metadata, schemas, templates, observability hooks and flowgraph (this commit).
