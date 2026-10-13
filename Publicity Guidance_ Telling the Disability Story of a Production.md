@@ -552,8 +552,6 @@ The guidance draws on the two supplied documents, current organisational commitm
 - [**Studio Policies and Commitments (UK and US)**](./Studio%20Policies%20and%20Commitments%20%28UK%20and%20US%29.md): Supplied research document. Studio, broadcaster, BFI, Channel 4, BBC, Ruderman, TAP and CDN commitments.
 - [Best Practice Guidance for Disability Portrayal and Creative Casting in TV Dramas and Movies](https://medium.com/@garethfordwilliams/best-practice-guidance-for-disability-portrayal-and-creative-casting-in-scripted-television-and-film-1e00ff0c4d40)
 - [Family Resources Survey 2024 to 2025](https://www.gov.uk/government/statistics/family-resources-survey-financial-year-2024-to-2025/family-resources-survey-financial-year-2024-to-2025)
-- [Cripping-up](https://en.wikipedia.org/wiki/Cripping-up)
-- [The DARK Zine Kollection](https://www.radical-guide.com/the-dark-zine-kollection/)
 - [How Shawn Levy Crafted All the Light We Cannot See](https://www.netflix.com/tudum/articles/all-the-light-we-cannot-see-adaptation)
 - [Behind the Scenes of Marvel Studios' Echo](https://d23.com/behind-the-scenes-of-marvel-studios-echo/)
 - [Echo Star Alaqua Cox on Bringing the Character to Life](https://d23.com/echo-star-alaqua-cox-on-bringing-the-groundbreaking-character-to-life/)
