@@ -1,7 +1,6 @@
 # **Creative Disability Casting Guidelines**
 
-This guide is designed to help Producers, Directors, Writers and Casting Directors explore disability casting as a creative opportunity in the early stages of a production, before any roles are cast.   
-It can be used alongside a casting analysis service to inform role-by-role recommendations, or as standalone guidance to support creative conversations, development decisions and casting briefs. The guidance encourages teams to consider how disability can shape character, story, audience interpretation, world-building and performance, while helping productions align with studio policies, industry commitments and best practice around authentic and inclusive casting.
+This guide is designed to help Producers, Directors, Writers and Casting Directors explore disability casting as a creative opportunity in the early stages of a production, before any roles are cast. It can be used alongside a casting analysis service to inform role-by-role recommendations, or as standalone guidance to support creative conversations, development decisions and casting briefs. The guidance encourages teams to consider how disability can shape character, story, audience interpretation, world-building and performance, while helping productions align with studio policies, industry commitments and best practice around authentic and inclusive casting.
 
 ## **Contents**
 
@@ -10,20 +9,21 @@ It can be used alongside a casting analysis service to inform role-by-role recom
 * [Disability Beyond Disability Stories](#disability-beyond-disability-stories)  
 * [Disability Creates New Audience Perspectives](#disability-creates-new-audience-perspectives)  
 * [Incidental Disability](#incidental-disability)  
-* [Complexity, Contradiction and Range](#complexity,-contradiction-and-range)  
+* [Complexity, Contradiction and Range](#complexity-contradiction-and-range)  
 * [Disability Casting Creates Cultural Conversation](#disability-casting-creates-cultural-conversation)  
 * [10 Things Every Director and Casting Director Should Know About Disability Casting](#10-things-every-director-and-casting-director-should-know-about-disability-casting)
 
-## **Introduction** {#introduction}
+<a id="introduction"></a>
+## **Introduction**
 
 Casting is one of the most powerful creative tools in film and television.  
-Before a character speaks, audiences respond to the actor’s body, movement, rhythm, voice, presence and energy. Casting shapes how audiences understand power, vulnerability, tension, intimacy and status.   
+Before a character speaks, audiences respond to the actor’s body, movement, rhythm, voice, presence and energy. Casting shapes how audiences understand power, vulnerability, tension, intimacy and status.  
 A different casting choice can completely change how a character or story is interpreted, and less predictable choices can lead to more interesting outcomes.
 
 ### **Disability can be an interesting creative choice.**
 
 Disabled actors can bring unique physicalities, experiences, behavioural detail, emotional perspectives and visual contrasts into storytelling. They tap into the audience’s unconscious preconceptions and biases. These differences can alter relationships, audience expectations and the emotional texture of a production.  
-Sometimes the presence of a disability that is apparent to the audience changes the meaning of a role entirely. Sometimes it can make a character, or a world feel richer, more believable and less predictable.  
+Sometimes the presence of a disability that is apparent to the audience changes the meaning of a role entirely. Sometimes it can make a character, or a world feel richer, more believable and less predictable.
 This guidance approaches disability casting as a creative opportunity rather than a limitation or specialist exercise. It is intended to support directors, producers, casting teams, writers and development executives in exploring how disability can:
 
 * create more original performances,  
@@ -47,12 +47,13 @@ The question is not:
 	*“Can disability fit within this story?”*
 
 A more creatively useful question is:  
-   
+    
 ***“What becomes possible when disability enters the frame?”***
 
 ---
 
-## **Creative Principles** {#creative-principles}
+<a id="creative-principles"></a>
+## **Creative Principles**
 
 **Principle 1:**  Creativity is about making interesting choices, and disability can be an interesting creative choice
 
@@ -86,7 +87,8 @@ A stronger question is:
 
 ---
 
-## **Disability Beyond Disability Stories** {#disability-beyond-disability-stories}
+<a id="disability-beyond-disability-stories"></a>
+## **Disability Beyond Disability Stories**
 
 Disability becomes creatively powerful when it exists beyond disability-led narratives.
 
@@ -104,19 +106,20 @@ Disability can:
 
 In action and thriller storytelling, disability may create more inventive approaches to danger and survival.
 
-In romance, disability may reshape intimacy, dependency, attraction, emotional, and physical exposure.
+In romance, disability may reshape intimacy, dependency, attraction, emotional and physical exposure.
 
 In fantasy and science fiction, disability can expand ideas around embodiment, enhancement, adaptation, cybernetics, magic and social identity.
 
 In historical drama, disability can make worlds feel more socially believable, more historically accurate and less artificially uniform.
 
-In comedy, disability can contribute to timing, awkwardness, contrast, discomfort, status reversal and character specificity without becoming the joke itself, especially when the joke challenges the audience about attitudes towards disability.
+In comedy, disability can contribute to timing, awkwardness, contrast, discomfort, status reversal and character specificity without becoming the joke itself, especially when the joke challenges audience attitudes towards disability.
 
 Disability is nearly always creatively interesting because it disrupts common expectations and challenges assumptions.
 
 ---
 
-## **Disability Creates New Audience Perspectives** {#disability-creates-new-audience-perspectives}
+<a id="disability-creates-new-audience-perspectives"></a>
+## **Disability Creates New Audience Perspectives**
 
 Audiences constantly interpret bodies and behaviour, even when scripts do not explicitly reference them.
 
@@ -144,7 +147,8 @@ Both can be creatively valuable.
 
 ---
 
-## **Incidental Disability** {#incidental-disability}
+<a id="incidental-disability"></a>
+## **Incidental Disability**
 
 Disability does not need to drive the plot to change the feeling of a production.  
 Many disabled performances will be entirely incidental:
@@ -166,7 +170,8 @@ The audience already understands disability exists in the real world. Allowing d
 
 ---
 
-## **Complexity, Contradiction and Range** {#complexity,-contradiction-and-range}
+<a id="complexity,-contradiction-and-range"></a>
+## **Complexity, Contradiction and Range**
 
 Disabled actors should not be limited to inspirational narratives, issue-led storytelling or morally ideal characters.
 
@@ -188,7 +193,7 @@ Interesting characters are often:
 * vulnerable,  
 * or morally ambiguous.
 
-Disability casting should not remove access to that complexity, in fact disabled actors can often provide an interpretive lens to these qualities rarely seen on screen.
+Disability casting should not remove access to that complexity; in fact disabled actors can often provide an interpretive lens to these qualities rarely seen on screen.
 
 Disabled performers can play:
 
@@ -208,13 +213,14 @@ Disabled performers can play:
 
 The goal is not to simplify storytelling. The goal is to create richer, more layered and more interesting character interpretation through tapping into the subtext the visible presence of disability brings.
 
-If creative questions arise around interpretation or audience response, productions should explore them collaboratively with disabled creatives as part of the development process. Work with actors to develop characters and narratives around their own lived experiences and then tell that story too.
+If creative questions arise around interpretation or audience response, productions should explore them collaboratively with disabled creatives as part of the development process. Work with actors, directors, writers, disabled consultants and casting teams to develop characters and narratives around their own lived experiences and then tell that story too.
 
 The solution to creative uncertainty is better collaboration, not narrower storytelling.
 
 ---
 
-## **Disability Casting Creates Cultural Conversation** {#disability-casting-creates-cultural-conversation}
+<a id="disability-casting-creates-cultural-conversation"></a>
+## **Disability Casting Creates Cultural Conversation**
 
 Film and television audiences respond strongly to casting choices that feel fresh, authentic, surprising, interesting or creatively ambitious.
 
@@ -245,15 +251,16 @@ Some of the most memorable productions are remembered precisely because they cas
 
 Casting differently is not simply a representation decision. It can be a powerful part of a production’s creative identity.
 
-## **10 Things Every Director and Casting Director Should Know About Disability Casting** {#10-things-every-director-and-casting-director-should-know-about-disability-casting}
+<a id="10-things-every-director-and-casting-director-should-know-about-disability-casting"></a>
+## **10 Things Every Director and Casting Director Should Know About Disability Casting**
 
 1. **Casting changes meaning.**  
    A disabled actor can completely change how audiences interpret power, vulnerability, authority, attraction, danger or intimacy without changing a single line of dialogue.
 
-2. **Disability is not only useful in stories about disability**.  
+2. **Disability is not only useful in stories about disability.**  
    Disability often becomes most creatively interesting when it appears in mainstream storytelling, genre work and familiar character archetypes where audiences are not expecting it.
 
-3. **Ask what disability could bring to every role**.  
+3. **Ask what disability could bring to every role.**  
    Not every role needs disability casting, but almost every role is worth exploring through this lens because it may unlock a more original or emotionally layered interpretation.
 
 4. **Disabled actors should not be limited to “safe” characters.**  
@@ -272,7 +279,7 @@ Casting differently is not simply a representation decision. It can be a powerfu
    If a story is fundamentally about exclusion, barriers, adaptation, otherness, outsiders, stigma or social treatment rather than a highly specific condition, a disabled perspective may open up stronger casting opportunities and more original and interesting interpretation.
 
 9. **Incidental disability makes fictional worlds feel richer and more believable.**  
-   Disability does not need to be explained or narratively justified to exist on screen. Sometimes the most powerful casting choices are the ones the story does not stop to explain or provide an exposition. Rather, they just accept that disability as a fundamental part of a character’s identity.
+   Disability does not need to be explained or narratively justified to exist on screen. Sometimes the most powerful casting choices are the ones the story does not stop to explain or provide an exposition on.
 
 10. **If there are creative concerns, collaborate rather than retreat.**  
     Bring disabled actors, directors, writers or consultants into the development process early. Better collaboration creates better storytelling than safer casting.
