@@ -170,7 +170,7 @@ The audience already understands disability exists in the real world. Allowing d
 
 ---
 
-<a id="complexity,-contradiction-and-range"></a>
+<a id="complexity-contradiction-and-range"></a>
 ## **Complexity, Contradiction and Range**
 
 Disabled actors should not be limited to inspirational narratives, issue-led storytelling or morally ideal characters.
