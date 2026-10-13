@@ -529,7 +529,7 @@ The opportunity is not to extract a personal story from every disabled performer
 The guidance draws on the two supplied documents, current organisational commitments, disability-led resources and examples of production publicity. The following sources are useful starting points for further development.
 
 ·       **Creative Disability Casting Guidelines:** Supplied working guide. Creative principles, incidental casting, audience interpretation and role-by-role opportunity.  
-·       **2025/26 Studio Policies and Commitments (UK and US):** Supplied research document. Studio, broadcaster, BFI, Channel 4, BBC, Ruderman, TAP and CDN commitments.  
+·       **Studio Policies and Commitments (UK and US):** Supplied research document. Studio, broadcaster, BFI, Channel 4, BBC, Ruderman, TAP and CDN commitments.  
 ·       [Best Practice Guidance for Disability Portrayal and Creative Casting in TV Dramas and Movies](https://medium.com/@garethfordwilliams/best-practice-guidance-for-disability-portrayal-and-casting-in-tv-dramas-and-movies-d8eda8b99c55)  
 ·       [Family Resources Survey 2024 to 2025](https://www.gov.uk/government/statistics/family-resources-survey-financial-year-2024-to-2025/family-resources-survey-financial-year-2024-to-2025)  
 ·       [Cripping-up](https://en.wikipedia.org/wiki/Cripping-up)  
