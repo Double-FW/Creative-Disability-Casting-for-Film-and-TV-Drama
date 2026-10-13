@@ -1,7 +1,7 @@
 ---
 title: "AGENTS"
 version: "1.1"
-author: "Double FW"
+author: "Double FW, Gareth Ford Williams, Zak Ford-Williams and Diane Urban"
 date: "2026-10-12"
 license: "CC BY 4.0"
 language: "en-GB"
