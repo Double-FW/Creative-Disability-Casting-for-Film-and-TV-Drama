@@ -13,23 +13,23 @@ The disability story is not an obligation to disclose. It is an opportunity to r
 # **Contents**
 
 1\. The publicity opportunity  
-·       2\. The three stories within the story  
-·       3\. Permission, ownership and boundaries  
-·       4\. Starting the publicity brief  
-·       5\. Putting talent and craft first  
-·       6\. Exploring character, relationships and emotion  
-·       7\. Telling the creative journey  
-·       8\. Source material, established universes and literature  
-·       9\. Disabled historical figures  
-·       10\. Explicit, coded, integrated and incidental portrayal  
-·       11\. Aligning publicity with organisational commitments  
-·       12\. Formats, assets and accessible publicity  
-·       13\. Interview questions that open up better stories  
-·       14\. Language and framing  
-·       15\. Examples of strong publicity angles  
-·       16\. Publicity brief template  
-·       17\. Opportunity review before publication  
-·       18\. Closing perspective  
+2\. The three stories within the story  
+3\. Permission, ownership and boundaries  
+4\. Starting the publicity brief  
+5\. Putting talent and craft first  
+6\. Exploring character, relationships and emotion  
+7\. Telling the creative journey  
+8\. Source material, established universes and literature  
+9\. Disabled historical figures  
+10\. Explicit, coded, integrated and incidental portrayal  
+11\. Aligning publicity with organisational commitments  
+12\. Formats, assets and accessible publicity  
+13\. Interview questions that open up better stories  
+14\. Language and framing  
+15\. Examples of strong publicity angles  
+16\. Publicity brief template  
+17\. Opportunity review before publication  
+18\. Closing perspective  
 Sources and further reading
 
 # **1\. The publicity opportunity**
